@@ -8,6 +8,7 @@ def driver():
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     driver.implicitly_wait(5)
     driver.maximize_window()
+    driver.get('https://www.allsports.fit/by/')
     yield driver
 
     driver.close()
